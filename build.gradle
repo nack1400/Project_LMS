@@ -1,0 +1,45 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	//OAuth 인증 lib 추가
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+	//Security 적용 타임리프
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
+	//Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	//썸네일 라이브러리 추가
+	implementation group: 'net.coobird', name: 'thumbnailator', version: '0.4.12'
+	//MYSQL 추가
+	implementation 'mysql:mysql-connector-java'
+
+	//롬복 추가!
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
