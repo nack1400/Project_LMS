@@ -8,38 +8,38 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-    <form class="d-block row g-3 w-50" style="margin: 100px;">
+    <form action="/joinproc" method="post" class="d-block row g-3 w-50" style="margin: 100px;">
         <h1>회원가입</h1>
         <div class="col-md-6">
             <label for="name" class="form-label">이름 입력</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="col-md-6">
             <label for="id" class="form-label">아이디 입력</label>
-            <input type="text" class="form-control" id="id">
+            <input type="text" class="form-control" id="id" name="id">
         </div>
         <div class="col-md-6">
             <label for="pwd" class="form-label">비밀번호 입력</label>
-            <input type="password" class="form-control" id="pwd">
+            <input type="password" class="form-control" id="pwd" name="pwd">
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">이메일 입력</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" name="email">
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="auth" id="flexRadioDefault1" value=0>
+            <input class="form-check-input" type="radio" name="auth" id="flexRadioDefault1" value="1">
             <label class="form-check-label" for="flexRadioDefault1">
                 강사
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="auth" id="flexRadioDefault2" value=1 checked>
+            <input class="form-check-input" type="radio" name="auth" id="flexRadioDefault2" value="2" checked>
             <label class="form-check-label" for="flexRadioDefault2">
                 학생
             </label>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">회원가입</button>
         </div>
     </form>
 </body>

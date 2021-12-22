@@ -42,4 +42,12 @@ public class MemberService implements UserDetailsService {
 
         memberrepo.save(member);
     }
+
+    public String login(MemberDTO dto){
+        if(){
+            return "/teacher_main.html"; //강사
+        }else if(){
+            return "/student_main.html";//학생
+        }
+    }
 }

@@ -21,10 +21,10 @@ public class Member implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long num;
 
-    @Column(name = "name", unique=true)
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "id")
+    @Column(name = "id", unique=true)
     private String id;
 
     @Column(name = "pwd")
@@ -34,7 +34,7 @@ public class Member implements UserDetails {
     private String email;
 
     @Column(name = "auth")
-    private int auth; //강사 0, 학생 1
+    private int auth; //강사 1 학생 2
 
     @Builder
     public Member(String name, String id, String pwd, String email, int auth){
