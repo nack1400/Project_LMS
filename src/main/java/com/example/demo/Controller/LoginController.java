@@ -10,9 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Log4j2
 public class LoginController {
 
+    @GetMapping("/")
+    public String loginpage(){
+        return "/view/index.html";
+    }
+
     @GetMapping("/join")
     public String joinpage(){
         return "/view/join.html";
     }
 
+    @GetMapping("/main")
+    public String mainpage(){
+        return "/view/main.html";
+    }
 }
