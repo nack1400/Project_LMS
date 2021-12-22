@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequiredArgsConstructor
 @Log4j2
@@ -40,8 +42,8 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String login(MemberDTO dto){
-        return service.login(dto);
+    public String login(MemberDTO dto, HttpServletRequest req){
+        return service.login(dto,req);
     }
 
 }

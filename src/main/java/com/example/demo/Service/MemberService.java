@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Optional;
 
 @Service
@@ -43,7 +45,20 @@ public class MemberService implements UserDetailsService {
         memberrepo.save(member);
     }
 
-    public String login(MemberDTO dto){
+    public String login(MemberDTO dto, HttpServletRequest req){
+
+
+        memberrepo.findById(dto.getId());
+        if(memberrepo == null){
+            return "/login";
+        }else{
+
+        }
+        HttpSession session = req.getSession();
+
+        session.setAttribute("id",dto.getId());
+        session.setAttribute("auth",dto.getAuth());
+
         if(){
             return "/teacher_main.html"; //강사
         }else if(){
