@@ -1,0 +1,30 @@
+body{
+    font-size:18px;
+    color:#666;
+}
+
+form{
+    width:400px;
+    margin:100px auto;
+    text-align:center;
+}
+
+form .loginInput{
+    font-size:20px;
+    width:90%;
+    height:50px;
+    margin:5px;
+}
+
+form div{
+    text-align:left;
+    margin:0px 0px 15px 15px;
+}
+
+form button{
+    font-size:20px;
+    width:90%;
+    height:50px;
+    margin:5px;
+}
+
