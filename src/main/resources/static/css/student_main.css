@@ -1,0 +1,30 @@
+body{
+    font-size:18px;
+    color:#666;
+}
+
+#mainDiv{
+    border:1px solid gray;
+    width:750px;
+    margin:100px auto;
+    padding:5px;
+    position:relative;
+}
+
+#mainDiv div{
+    border:1px solid gray;
+    width:40%;
+    height:300px;
+    position:absolute;
+    top:10px;
+    left:
+}
+
+#mainDiv #listDiv ul{
+    border:1px solid gray;
+    width:30%;
+}
+
+#mainDiv #listDiv ul li{
+    border:1px solid gray;
+}
