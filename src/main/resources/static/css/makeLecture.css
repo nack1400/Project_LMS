@@ -1,0 +1,31 @@
+body{
+    font-size:18px;
+    color:#666;
+}
+
+form{
+    width:600px;
+    margin:100px auto;
+    padding:10px;
+}
+
+form input{
+    font-size:20px;
+    width:95%;
+    height:40px;
+    margin:5px 5px 20px 0px;
+}
+
+form textarea{
+    font-size:20px;
+    width:95%;
+    height:300px;
+    margin:5px 5px 20px 0px;
+}
+
+form button{
+    font-size:20px;
+    width:95%;
+    height:50px;
+    margin-top:20px;
+}
