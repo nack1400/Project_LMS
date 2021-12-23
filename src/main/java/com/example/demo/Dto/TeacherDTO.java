@@ -6,6 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TeacherDTO {
-    private String teacherId;
-    private String teacherName;
+    private String id;
+    private String nem;
 }
