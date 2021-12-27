@@ -25,10 +25,14 @@ public class Lecture {
     @Column
     private String teacherId;
 
+    @Column
+    private String contents;
+
     @Builder
-    public Lecture(String lectureName, int numOfStudents, String teacherId){
+    public Lecture(String lectureName, int numOfStudents, String teacherId, String contents){
         this.lectureName=lectureName;
         this.numOfStudents=numOfStudents;
         this.teacherId=teacherId;
+        this.contents=contents;
     }
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequiredArgsConstructor
@@ -29,11 +30,6 @@ public class LoginController {
         return "/view/join.html";
     }
 
-    @GetMapping("/main")
-    public String mainpage(){
-        return "/view/main.html";
-    }
-
     @PostMapping("/joinproc")
     public String joinprocpage(MemberDTO dto){
         System.out.println(dto.toString());
@@ -43,6 +39,10 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(MemberDTO dto, HttpServletRequest req){
+//        HttpSession session = req.getSession();
+//
+//        session.setAttribute("id",dto.getId());
+//        session.setAttribute("auth",service.toString());
         return service.login(dto,req);
     }
 
