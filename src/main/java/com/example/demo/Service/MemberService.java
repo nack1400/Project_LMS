@@ -53,21 +53,8 @@ public class MemberService implements UserDetailsService {
     public String login(MemberDTO dto, HttpServletRequest req){
 
         Optional<Member> member = memberrepo.findById(dto.getId());
-//        if(member.isPresent()) {
-//            System.out.println("있다");
-//            System.out.println("멤버패스워드 : "  + member.get().getPwd());
-//            System.out.println("패스워드 : "  + tmp.encode("1234"));
-//        }
-//        else {
-//            System.out.println("없다");
-//        }
-
-//        System.out.println("멤버패스워드 : "  + member.get().getPwd());
-//        System.out.println("패스워드 : "  + tmp.encode(dto.getPwd()));
-
 
         if(member.isPresent()){
-//            if(tmp.encode(dto.getPwd()).matches(member.get().getPwd())){
             if(tmp.matches(dto.getPwd(),member.get().getPwd())){
                     System.out.println("로그인 성공");
                 }else{
@@ -81,22 +68,20 @@ public class MemberService implements UserDetailsService {
             System.out.println("등록된 아이디가 없습니다");
             return "redirect:/";
         }
+
         HttpSession session = req.getSession();
-
-
-
-        session.setAttribute("id",dto.getId());
         session.setAttribute("auth",member.get().getAuth());
+        session.setAttribute("id",dto.getId());
+//        System.out.println(dto.getId());
+//        System.out.println(dto.getAuth());
+//        System.out.println(session.getAttribute("id"));
+//        System.out.println(session.getAttribute("auth"));
 
-        System.out.println(dto.getId());
-        System.out.println(dto.getAuth());
-        System.out.println(session.getAttribute("id"));
-        System.out.println(session.getAttribute("auth"));
-
-        if(dto.getAuth() == 1){
-            return "/view/teacher_main.html"; //강사
-        }else{
-            return "/view/student_main.html";//학생
-        }
+        return "redirect:/main";
+//        if(dto.getAuth() == 1){
+//            return "/view/teacher_main.html"; //강사
+//        }else{
+//            return "/view/student_main.html";//학생
+//        }
     }
 }

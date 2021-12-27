@@ -9,4 +9,5 @@ public class LectureDTO {
     private String teacherId;
     private String lectureName;
     private int numOfStudents;
+    private String contents;
 }
