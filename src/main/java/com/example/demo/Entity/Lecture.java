@@ -16,16 +16,16 @@ public class Lecture {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lectureCode;
 
-    @Column
+    @Column(name = "lectureName")
     private String lectureName;
 
-    @Column
+    @Column(name = "numOfStudents")
     private int numOfStudents;
 
-    @Column
+    @Column(name = "teacherId")
     private String teacherId;
 
-    @Column
+    @Column(name = "contents")
     private String contents;
 
     @Builder
