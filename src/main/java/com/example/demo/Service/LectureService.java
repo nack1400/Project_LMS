@@ -19,7 +19,7 @@ public class LectureService {
     public void save(LectureDTO dto, HttpServletRequest req){
         HttpSession session = req.getSession();
         Lecture lecture = Lecture.builder()
-                .teacherId(session.getId())
+                .teacherId(session.getAttribute("id").toString())
                 .lectureName(dto.getLectureName())
                 .contents(dto.getContents())
                 .build();
