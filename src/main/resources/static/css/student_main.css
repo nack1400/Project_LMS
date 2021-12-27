@@ -4,7 +4,6 @@ body{
 }
 
 #mainDiv{
-    border:1px solid gray;
     width:660px;
     height:660px;
     margin:100px auto;
@@ -14,7 +13,7 @@ body{
 
 #mainDiv div{
     background:rgb(230, 230, 230);
-    border-top:4px solid black;
+    border-top:4px solid rgb(6, 0, 88);
     width:300px;
     height:300px;
     position:absolute;
@@ -31,10 +30,13 @@ body{
     position:absolute;
     bottom:0px;
     left:0px;
-    background:black;
+    background:rgb(6, 0, 88);
     color:white;
     font-size:22px;
     cursor:pointer;
+}
+#mainDiv #div1 button:hover{
+    background:gray;
 }
 
 #mainDiv #div2{
@@ -67,9 +69,10 @@ body{
     height:100%;
     border:none;
     cursor:pointer;
+    font-size:24px;
 }
 
 #mainDiv .menuBtn:hover{
-
+    background:rgb(233, 233, 233);
 }
 
