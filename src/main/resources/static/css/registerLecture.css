@@ -1,0 +1,14 @@
+body{
+    font-size:18px;
+}
+
+#mainDiv{
+    width:700px;
+    margin:100px auto;
+    padding:10px;
+    border:1px solid gray;
+}
+
+#mainDiv h1{
+    border-bottom:2px solid gray;
+}
