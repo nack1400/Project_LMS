@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -25,4 +26,8 @@ public class LectureService {
                 .build();
         lecturerepo.save(lecture);
     }
+    public List<Lecture> findByTeacherId(String tid){
+        return lecturerepo.findByTeacherId(tid);
+    }
+
 }
