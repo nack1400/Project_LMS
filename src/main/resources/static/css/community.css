@@ -1,0 +1,75 @@
+body{
+    font-size:18px;
+}
+
+#postList{
+    width:1000px;
+    margin:100px auto;
+    padding:5px;
+}
+
+#postList h2{
+    margin-left:20px;
+}
+
+#postList table{
+    width:95%;
+    margin:5px auto;
+    border-top:3px solid black;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+#postList table th,td{
+    border-bottom:1px solid gray;
+    height:40px;
+}
+
+#postList table td{
+    color:#4b4b4b;
+}
+
+#postList table td a{
+    text-decoration:none;
+    color:black;
+}
+#postList table td a:hover{
+    text-decoration:underline;
+}
+
+#postList table #num{
+    width:5%;
+}
+
+#postList table #subject{
+    width:60%;
+}
+
+#pageNav{
+    width:40%;
+    margin:30px auto;
+    border:1px solid gray;
+}
+
+#pageNav ul{
+    list-style:none;
+    padding:0px;
+    width:100%;
+
+}
+
+#pageNav li{
+    margin:2px;
+
+    border:1px solid lightgray;
+    display:inline-block;
+}
+
+#pageNav #previousBtn,#nextBtn{
+    width:70px;
+    text-al
+}
+
+
+
+
