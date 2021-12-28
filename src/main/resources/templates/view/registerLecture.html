@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" type="text/css" href="/static/css/registerLecture.css">
-  <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/css/registerLecture.css">
+  <link rel="stylesheet" type="text/css" href="/css/header.css">
 </head>
 <body>
 <header>
@@ -14,24 +14,25 @@
 <div id="mainDiv">
     <h2>수강신청</h2>
 
+    <th:block>
     <div id="lectureList">
         <ul>
-            <li>
+            <li th:each="dto:${lecture}">
                 <table>
                     <tr>
                         <td>강의명</td>
-                        <td>C언어</td>
+                        <td th:text="${dto.lectureName}"></td>
                     </tr>
                     <tr>
                         <td>강사</td>
-                        <td>홍길동</td>
+                        <td th:text="${dto.teacherId}"></td>
                     </tr>
                     <tr>
                         <td>강의 내용</td>
-                        <td>~~~~~~~~~~</td>
+                        <td th:text="${dto.contents}"></td>
                     </tr>
                 </table>
-                <button type="button">신청하기</button>
+                <button type="button" value="">신청하기</button>
             </li>
             <li>
                 <table>
@@ -50,43 +51,10 @@
                 </table>
                 <button type="button">신청하기</button>
             </li>
-            <li>
-                <table>
-                    <tr>
-                        <td>강의명</td>
-                        <td>자바스크립트</td>
-                    </tr>
-                    <tr>
-                        <td>강사</td>
-                        <td>홍길동</td>
-                    </tr>
-                    <tr>
-                        <td>강의 내용</td>
-                        <td>~~~~~~~~~~</td>
-                    </tr>
-                </table>
-                <button type="button">신청하기</button>
-            </li>
-            <li>
-                <table>
-                    <tr>
-                        <td>강의명</td>
-                        <td>파이썬</td>
-                    </tr>
-                    <tr>
-                        <td>강사</td>
-                        <td>홍길동</td>
-                    </tr>
-                    <tr>
-                        <td>강의 내용</td>
-                        <td>~~~~~~~~~~</td>
-                    </tr>
-                </table>
-                <button type="button">신청하기</button>
-            </li>
         </ul>
 
     </div>
+    </th:block>
 </div>
 </body>
 </html>
