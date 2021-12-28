@@ -48,27 +48,32 @@ body{
 #pageNav{
     width:40%;
     margin:30px auto;
-    border:1px solid gray;
 }
 
 #pageNav ul{
     list-style:none;
     padding:0px;
     width:100%;
-
 }
 
-#pageNav li{
-    margin:2px;
-
+#pageNav .numBtn{
+    margin:0.5px;
+    width:30px;
     border:1px solid lightgray;
     display:inline-block;
+    text-align:center;
 }
 
 #pageNav #previousBtn,#nextBtn{
-    width:70px;
-    text-al
+    margin:2px;
+    width:30px;
+    border:1px solid lightgray;
+    display:inline-block;
+    text-align:center;
+    width:90px;
 }
+
+
 
 
 
