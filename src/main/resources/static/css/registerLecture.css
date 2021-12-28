@@ -6,9 +6,34 @@ body{
     width:700px;
     margin:100px auto;
     padding:10px;
-    border:1px solid gray;
 }
 
-#mainDiv h1{
+#mainDiv h2{
+    padding:10px;
     border-bottom:2px solid gray;
+}
+
+#lectureList ul{
+    padding-left:0px;
+    list-style:none;
+}
+
+#lectureList ul li{
+    margin-bottom:40px;
+    border-bottom:1px dotted gray;
+}
+
+#lectureList ul li table{
+    border:3px solid lightgray;
+    width:100%;
+    text-align:center;
+}
+#lectureList ul li table td{
+    border:1px solid lightgray;
+}
+
+#lectureList ul li button{
+    width:30%;
+    height:40px;
+    margin:10px 10px 10px 70%;
 }
