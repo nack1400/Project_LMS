@@ -1,0 +1,10 @@
+header{
+    width:1024px;
+    border-bottom:6px solid black;
+    margin:10px auto;
+}
+
+header h1{
+    width:80%;
+    margin-left:30px;
+}
