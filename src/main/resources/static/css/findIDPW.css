@@ -1,0 +1,41 @@
+body{
+    font-size:18px;
+}
+
+div{
+    border-top:3px solid black;
+    width:500px;
+    margin:60px auto;
+}
+
+div h2{
+    margin-left:10px;
+}
+
+form{
+    width:100%
+    margin:100px auto;
+}
+
+table{
+    width:100%;
+    text-align:center;
+}
+
+table th,td{
+    height:50px;
+}
+
+table td input{
+    height:85%;
+    width:80%;
+    font-size:23px;
+}
+
+button{
+    margin:10px 10px 10px 40%;
+    width:20%;
+    height:40px;
+    font-size:16px;
+
+}
