@@ -1,0 +1,126 @@
+body{
+    font-size:18px;
+}
+
+#mainDiv{
+    width:900px;
+    margin:100px auto;
+    height:700px;
+    border:1px solid gray;
+    border-radius:20px;
+    padding:10px;
+}
+
+#myLecturelist{
+    display: block;
+    float:left;
+    width:30%;
+    border-right:2px solid lightgray;
+    height:650px;
+    margin:5px;
+    padding:10px;
+}
+
+#myLecturelist h2{
+    border-bottom:2px solid gray;
+    padding:10px;
+}
+
+#myLecturelist ul{
+    list-style:none;
+    padding-left:0px;
+    width:95%;
+    margin:2px auto;
+}
+
+#myLecturelist ul li{
+    border-bottom:1px solid gray;
+    display:block;
+    height:40px;
+    line-height:40px;
+}
+
+#myLecturelist ul li a{
+    display:block;
+    text-decoration:none;
+    color:black;
+    padding-left:15px;
+}
+
+#myLecturelist ul li a:hover{
+    background:#ededed;
+}
+
+#myLecturelist ul li a:focus{
+    font-size:20px;
+    font-weight:bold;
+}
+
+#lectureContents{
+    display: block;
+    float:left;
+    width:65%
+    height:650px;
+    margin:5px;
+}
+
+#lectureContents h2{
+    border-bottom:2px solid gray;
+    padding:10px;
+}
+
+#lectureContents button{
+    width:130px;
+    height:30px;
+    margin-left:75%;
+
+}
+
+#lectureContents #introduction{
+    border:1px solid lightgray;
+    border-radius:15px;
+    width:95%;
+    margin:5px auto;
+    padding:10px 10px 30px 10px;
+}
+
+#lectureContents #introduction p{
+    word-break:break-all;
+    width:95%;
+    margin:2px auto;
+}
+
+#lectureContents #lectureVideo{
+    border:1px solid lightgray;
+    border-radius:15px;
+    width:95%;
+    margin:5px auto;
+    padding:10px;
+    padding:10px 10px 30px 10px;
+}
+
+#lectureContents #lectureVideo ul{
+    list-style:none;
+    padding-left:0px;
+    width:95%;
+    margin:2px auto;
+}
+
+#lectureContents #lectureVideo ul li{
+    border-bottom:1px solid gray;
+    display:block;
+    height:40px;
+    line-height:40px;
+
+}
+
+#lectureContents #lectureVideo ul li a{
+    display:block;
+    text-decoration:none;
+    color:black;
+    padding-left:15px;
+}
+
+#lectureContents #lectureVideo ul li a:hover{
+    background:#ededed;
+}

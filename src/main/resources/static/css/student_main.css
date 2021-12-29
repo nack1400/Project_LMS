@@ -11,31 +11,39 @@ body{
 }
 
 #mainDiv div{
-    background:rgb(230, 230, 230);
     border-top:4px solid rgb(6, 0, 88);
     width:300px;
     height:300px;
     position:absolute;
 }
 
+#mainDiv #div1 h4{
+    display:block;
+    height:50px;
+    margin-top:0px;
+    line-height:50px;
+    background:#e6e6e6;
+    padding-left:10px;
+}
+
+#mainDiv #div1 ul li{
+    padding-left:0px;
+}
+
+#mainDiv #div1 ul li a{
+    text-decoration:none;
+    display:block;
+    width:100%;
+    color:black;
+}
+
+#mainDiv #div1 ul li a:hover{
+    background:#e6e6e6;
+}
+
 #mainDiv #div1{
     top:20px;
     left:20px;
-}
-
-#mainDiv #div1 button{
-    width:300px;
-    height:40px;
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    background:rgb(6, 0, 88);
-    color:white;
-    font-size:22px;
-    cursor:pointer;
-}
-#mainDiv #div1 button:hover{
-    background:gray;
 }
 
 #mainDiv #div2{
