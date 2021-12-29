@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -14,47 +14,35 @@
 <div id="mainDiv">
     <h2>수강신청</h2>
 
-    <th:block>
-    <div id="lectureList">
-        <ul>
-            <li th:each="dto:${lecture}">
-                <table>
-                    <tr>
-                        <td>강의명</td>
-                        <td th:text="${dto.lectureName}"></td>
-                    </tr>
-                    <tr>
-                        <td>강사</td>
-                        <td th:text="${dto.teacherId}"></td>
-                    </tr>
-                    <tr>
-                        <td>강의 내용</td>
-                        <td th:text="${dto.contents}"></td>
-                    </tr>
-                </table>
-                <button type="button" value="">신청하기</button>
-            </li>
-            <li>
-                <table>
-                    <tr>
-                        <td>강의명</td>
-                        <td>자바</td>
-                    </tr>
-                    <tr>
-                        <td>강사</td>
-                        <td>홍길동</td>
-                    </tr>
-                    <tr>
-                        <td>강의 내용</td>
-                        <td>~~~~~~~~~~</td>
-                    </tr>
-                </table>
-                <button type="button">신청하기</button>
-            </li>
-        </ul>
 
-    </div>
-    </th:block>
+    <form action="/registerclass" method="post">
+        <div id="lectureList">
+            <ul>
+                <th:block>
+                    <li th:each="dto:${lecture}">
+                        <table>
+                            <label>
+                                수강신청 체크 <input type="radio" th:value="${dto.lectureCode}" name="code"><br>
+                            </label>
+                            <tr>
+                                <td>강의명</td>
+                                <td th:text="${dto.lectureName}"></td>
+                            </tr>
+                            <tr>
+                                <td>강사</td>
+                                <td th:text="${dto.teacherId}"></td>
+                            </tr>
+                            <tr>
+                                <td>강의 내용</td>
+                                <td th:text="${dto.contents}"></td>
+                            </tr>
+                        </table>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+        <button type="submit">신청하기</button>
+    </form>
 </div>
 </body>
 </html>

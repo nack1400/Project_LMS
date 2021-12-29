@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import com.example.demo.Dto.ClassDTO;
 import com.example.demo.Dto.LectureDTO;
 import com.example.demo.Dto.MemberDTO;
 import com.example.demo.Entity.Lecture;
@@ -31,7 +32,6 @@ public class MainController {
     public String mainpage(LectureDTO dto,HttpServletRequest req, Model model){
         HttpSession session = req.getSession();
 
-
         if("1".equals(session.getAttribute("auth").toString())){
             List<Lecture> lecture = service.findByTeacherId(session.getAttribute("id").toString());
             System.out.println("세션 아이디 : " + session.getAttribute("id").toString());
@@ -56,12 +56,26 @@ public class MainController {
     }
 
     @GetMapping("/registerlecture")
-    public String registerlecture(){
-        return "registerLecture.html";
+    public String registerlecture(LectureDTO dto, Model model){
+        List<Lecture> lecture = service.findAll();
+        model.addAttribute("lecture", lecture);
+//        for(int i = 0; i < lecture.size() ;i++){
+//            System.out.println("확인 : " +lecture.get(i).getTeacherId());
+//        }
+        return "/view/registerLecture.html";
     }
 
-//    @PostMapping("/registerclass")
-//    public String registerclass(LectureDTO dto, HttpServletRequest req){
-//        serviceclass.
-//    }
+    @PostMapping("/registerclass")
+    public String registerclass(ClassDTO dto, HttpServletRequest req){
+        HttpSession session = req.getSession();
+        System.out.println(session.getAttribute("id").toString());
+        System.out.println(dto.getLectureCode());
+        System.out.println(serviceclass.findByClass(session.getAttribute("id").toString(),dto.getLectureCode()));
+        if(serviceclass.findByClass(session.getAttribute("id").toString(),dto.getLectureCode()) != null) {
+            System.out.println("이미 수강신청한 과목입니다.");
+            return "redirect:/main";
+        }
+        serviceclass.save(dto,req);
+        return "redirect:/main";
+    }
 }

@@ -7,4 +7,9 @@ import java.util.List;
 
 public interface ClassRepository extends JpaRepository<Class, Long> {
     List<Class> findByStudentId(String sid);
+
+    default List<Class> findByClass(String sid, long code) {
+        return null;
+    }
+
 }
