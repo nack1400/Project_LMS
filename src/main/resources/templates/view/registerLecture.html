@@ -20,10 +20,8 @@
             <ul>
                 <th:block>
                     <li th:each="dto:${lecture}">
+                        수강신청 체크 <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}"><br>
                         <table>
-                            <label>
-                                수강신청 체크 <input type="radio" th:value="${dto.lectureCode}" name="code"><br>
-                            </label>
                             <tr>
                                 <td>강의명</td>
                                 <td th:text="${dto.lectureName}"></td>

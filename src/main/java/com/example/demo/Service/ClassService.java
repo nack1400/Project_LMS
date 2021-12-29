@@ -21,7 +21,7 @@ public class ClassService {
         HttpSession session = req.getSession();
         Class tmp = Class.builder()
                 .studentId(session.getAttribute("id").toString())
-                .lectureCode(dto.getLectureCode())
+                .lectureCode(Long.parseLong(req.getParameter("code")))
                 .build();
         classrepo.save(tmp);
     }

@@ -2,9 +2,8 @@ package com.example.demo.Controller;
 
 import com.example.demo.Dto.ClassDTO;
 import com.example.demo.Dto.LectureDTO;
-import com.example.demo.Dto.MemberDTO;
+import com.example.demo.Entity.Class;
 import com.example.demo.Entity.Lecture;
-import com.example.demo.Repository.ClassRepository;
 import com.example.demo.Service.ClassService;
 import com.example.demo.Service.LectureService;
 import lombok.RequiredArgsConstructor;
@@ -58,23 +57,35 @@ public class MainController {
     @GetMapping("/registerlecture")
     public String registerlecture(LectureDTO dto, Model model){
         List<Lecture> lecture = service.findAll();
+
         model.addAttribute("lecture", lecture);
-//        for(int i = 0; i < lecture.size() ;i++){
+        for(int i = 0; i < lecture.size() ;i++){
 //            System.out.println("확인 : " +lecture.get(i).getTeacherId());
-//        }
+            System.out.println(lecture.get(i).getLectureCode());
+        }
         return "/view/registerLecture.html";
     }
 
     @PostMapping("/registerclass")
-    public String registerclass(ClassDTO dto, HttpServletRequest req){
+    public String registerclass(ClassDTO dto ,HttpServletRequest req){
+
         HttpSession session = req.getSession();
-        System.out.println(session.getAttribute("id").toString());
-        System.out.println(dto.getLectureCode());
-        System.out.println(serviceclass.findByClass(session.getAttribute("id").toString(),dto.getLectureCode()));
-        if(serviceclass.findByClass(session.getAttribute("id").toString(),dto.getLectureCode()) != null) {
-            System.out.println("이미 수강신청한 과목입니다.");
-            return "redirect:/main";
+        String sid = session.getAttribute("id").toString();
+        long code = Long.parseLong(req.getParameter("code"));
+        session.setAttribute("code", code);
+
+        System.out.println(sid);
+        System.out.println(code);
+
+        List<Class> tmp = serviceclass.findByStudentId(sid);
+        System.out.println(tmp.get(0).getLectureCode() + tmp.get(0).getStudentId());
+        for(int i = 0; i < tmp.size() ;i++){
+            if(tmp.get(i).getLectureCode() == code) {
+                System.out.println("이미 수강신청한 과목입니다.");
+                return "redirect:/main";
+            }
         }
+
         serviceclass.save(dto,req);
         return "redirect:/main";
     }
