@@ -28,4 +28,8 @@ public class ClassService {
     public List<Class> findByStudentId(String sid){
         return classrepo.findByStudentId(sid);
     }
+
+    public List<Class> findByClass(String sid, long code){
+        return classrepo.findByClass(sid,code);
+    }
 }

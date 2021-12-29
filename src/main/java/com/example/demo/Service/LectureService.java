@@ -29,5 +29,8 @@ public class LectureService {
     public List<Lecture> findByTeacherId(String tid){
         return lecturerepo.findByTeacherId(tid);
     }
+    public List<Lecture> findAll(){
+        return lecturerepo.findAll();
+    }
 
 }
