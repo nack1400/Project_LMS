@@ -32,5 +32,10 @@ public class LectureService {
     public List<Lecture> findAll(){
         return lecturerepo.findAll();
     }
-
+//    public List<Lecture> findByLectureCode(Long code){
+//        return lecturerepo.findByLectureCode(code);
+//    }
+    public Lecture findByLectureCode(Long code){
+        return lecturerepo.findByLectureCode(code);
+    }
 }

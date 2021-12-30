@@ -67,7 +67,7 @@ public class MainController {
     }
 
     @PostMapping("/registerclass")
-    public String registerclass(ClassDTO dto ,HttpServletRequest req){
+    public String registerclass(LectureDTO ldto, ClassDTO dto ,HttpServletRequest req){
 
         HttpSession session = req.getSession();
         String sid = session.getAttribute("id").toString();
@@ -85,7 +85,8 @@ public class MainController {
                 return "redirect:/main";
             }
         }
-
+        Lecture ltmp = service.findByLectureCode(code);
+        ltmp.setNumOfStudents(ltmp.getNumOfStudents()+1);
         serviceclass.save(dto,req);
         return "redirect:/main";
     }
