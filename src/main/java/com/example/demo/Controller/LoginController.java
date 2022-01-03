@@ -45,7 +45,4 @@ public class LoginController {
 //        session.setAttribute("auth",service.toString());
         return service.login(dto,req);
     }
-
-
-
 }
