@@ -1,29 +1,48 @@
-body{
-    font-size:18px;
+.index-main {
+    display: flex;
+    justify-content: center;
 }
 
-form{
-    width:400px;
-    margin:100px auto;
-    text-align:center;
+.index-main__loginForm {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-form .loginInput{
-    font-size:20px;
-    width:90%;
-    height:50px;
-    margin:5px;
+.index-main__loginForm h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-form div{
-    text-align:left;
-    margin:0px 0px 15px 15px;
+.loginInput {
+    height: 45px;
+    font-size: 20px;
+    border: 2px solid var(--main-border);
+    padding-left: 10px;
 }
 
-form button{
-    font-size:20px;
-    width:90%;
-    height:50px;
-    margin:5px;
+.loginInput:focus {
+    border-color: var(--main-color);
 }
+
+.index-main__loginForm > button {
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.index-main__loginForm > button:hover {
+    opacity: 0.7;
+}
+
+.index-main__loginBtn {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
 
