@@ -2,36 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/css/join.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <title>Project LMS - 회원가입</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<header>
-    <h1>Project LMS</h1>
-</header>
+    <header class="title-logo">
+        <h1>Project LMS</h1>
+    </header>
+    <main class="join-main">
+        <form class="join-main__joinForm" action="/joinproc" method="post">
+            <h2>회원가입</h2>
+            <div class="join-main__input-row">
+                <label for="name">이름</label>
+                <input id="name" class="joinInput" type="text" name="name">
+            </div>
+            <div class="join-main__input-row">
+                <label for="id">아이디</label>
+                <input id="id" class="joinInput" type="text" name="id">
+            </div>
+            <div class="join-main__input-row">
+                <label for="pwd">비밀번호</label>
+                <input id="pwd" class="joinInput" type="password" name="pwd">
+            </div>
+            <div class="join-main__input-row">
+                <label for="email">이메일</label>
+                <input id="email" class="joinInput" type="email" name="email">
+            </div>
+           
+            <div class="join-main__user-select">
+                <label for="teacher">강사</label>
+                <input type="radio" value="1" name="auth" id="teacher">
+                <label for="student">학생</label>
+                <input type="radio" value="2" name="auth" id="student" checked>
+            </div>
 
-<form action="/joinproc" method="post">
-    <h1>회원가입</h1>
-    <hr>
-    <br>
-    이름 입력<br>
-    <input class="joinInput" type="text" name="name"><br>
-    아이디 입력<br>
-    <input class="joinInput" type="text" name="id"><br>
-    비밀번호 입력<br>
-    <input class="joinInput" type="password" name="pwd"><br>
-    이메일 입력<br>
-    <input class="joinInput" type="email" name="email"><br>
+            <div class="join-main__btnDiv">
+                <button class="join-main__joinBtn mainBtn" type="submit">회원가입</button>
+                <button class="join-main__exitBtn" onclick="location.href='index.html'">취소</button>
+            </div>
+            
+        </form>
+    </main>
 
-    <label>
-        <input type="radio" value="1" name="auth"> 강사<br>
-        <input type="radio" value="2" name="auth" checked> 학생<br>
-    </label>
 
-    <button type="submit">회원가입</button>
-
-</form>
 
 <footer>
 

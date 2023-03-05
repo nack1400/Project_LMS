@@ -1,0 +1,50 @@
+.join-main {
+    display: flex;
+    justify-content: center;
+}
+
+.join-main__joinForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-main__joinForm h2 {
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.join-main__input-row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.join-main__input-row label {
+    font-size: 20px;
+}
+
+.join-main__input-row .joinInput {
+    height: 30px;
+    width: 300px;
+    border: 2px solid var(--main-border);
+    padding-left: 10px;
+}
+
+.join-main__input-row .joinInput:focus {
+    border-color: var(--main-color);
+}
+
+.join-main__user-select input {
+    margin-right: 20px;
+    margin-bottom: 70px;
+}
+
+.join-main__btnDiv button {
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+}
