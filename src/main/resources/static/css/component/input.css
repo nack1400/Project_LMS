@@ -1,0 +1,8 @@
+input {
+    font-size: 20px;
+    border: 2px solid var(--main-border);
+    padding-left: 10px;
+}
+input:focus {
+    border-color: var(--main-color);
+}

@@ -1,41 +1,48 @@
-body{
-    font-size:18px;
+.findIDPW-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-div{
-    border-top:3px solid black;
-    width:500px;
-    margin:60px auto;
+.findIDPW-main h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-div h2{
-    margin-left:10px;
+.findIDPW-main__idDiv {
+    width: 40%; 
+    margin-bottom: 50px;
 }
 
-form{
-    width:100%
-    margin:100px auto;
+.findIDPW-main__pwDiv {
+    width: 40%;
+    border-top: 1px solid var(--main-border);
+    padding-top: 50px;
 }
 
-table{
-    width:100%;
-    text-align:center;
+.findIDPW-main form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-table th,td{
-    height:50px;
+ .input-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
 }
 
-table td input{
-    height:85%;
-    width:80%;
-    font-size:23px;
+.findIDPW-main legend {
+    font-size: 20px;
 }
 
-button{
-    margin:10px 10px 10px 40%;
-    width:20%;
-    height:40px;
-    font-size:16px;
+.findIDPW-main button {
+    height: 35px;
+    width: 150px;
+    margin-top: 25px;
 
 }

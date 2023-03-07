@@ -1,80 +1,89 @@
-body{
-    font-size:18px;
+.community-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#postList{
-    width:1000px;
-    margin:100px auto;
-    padding:5px;
+.community-main h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
 }
 
-#postList h2{
-    margin-left:20px;
+.community-main table {
+    width: 80%;
+    margin-bottom: 100px;
 }
 
-#postList table{
-    width:95%;
-    margin:5px auto;
-    border-top:3px solid black;
-    border-collapse:collapse;
-    text-align:center;
+.community-main table th {
+    font-weight: 600;
+    padding: 5px;
+    border-top: 2px solid var(--main-color);
 }
 
-#postList table th,td{
-    border-bottom:1px solid gray;
-    height:40px;
+.community-main table td {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid rgb(176, 176, 176);
+    border-top: 1px solid rgb(176, 176, 176);
 }
 
-#postList table td{
-    color:#4b4b4b;
+.community-main table td:nth-child(1), 
+.community-main table td:nth-child(2) {
+    font-weight: 600;
 }
 
-#postList table td a{
-    text-decoration:none;
-    color:black;
-}
-#postList table td a:hover{
-    text-decoration:underline;
+.community-main table #num {
+    width: 7%;
 }
 
-#postList table #num{
-    width:5%;
+.community-main table #subject {
+    width: 60%;
 }
 
-#postList table #subject{
-    width:60%;
+.community-main table td:nth-child(3), 
+.community-main table td:nth-child(4),
+.community-main table td:nth-child(5) {
+    opacity: 0.7;
+    font-size: 14px;
 }
 
-#pageNav{
-    width:40%;
-    margin:30px auto;
+.community-main table tr:not(tr:nth-child(1)) {
+    cursor: pointer;
 }
 
-#pageNav ul{
-    list-style:none;
-    padding:0px;
-    width:100%;
+.community-main table tr:not(tr:nth-child(1)):hover {
+    background-color: var(--main-border);
 }
 
-#pageNav .numBtn{
-    margin:0.5px;
-    width:30px;
-    border:1px solid lightgray;
-    display:inline-block;
-    text-align:center;
+.community-main__pageNav ul{
+    display: flex;
+    justify-content: center;
 }
 
-#pageNav #previousBtn,#nextBtn{
-    margin:2px;
-    width:30px;
-    border:1px solid lightgray;
-    display:inline-block;
-    text-align:center;
-    width:90px;
+.community-main__pageNav li {
+    cursor: pointer;
+    margin: 0px 4px;
+    border: 2px solid var(--main-border);
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 11px;
 }
 
+.community-main__pageNav li:hover {
+    border-color: var(--main-color);
+}
 
+.community-main__pageNav #previousBtn,
+.community-main__pageNav #nextBtn {
+    width: 80px;
+    background-color: var(--main-border);
+}
 
-
-
-
+.community-main__pageNav #previousBtn:hover,
+.community-main__pageNav #nextBtn:hover {
+    opacity: 0.7;
+}

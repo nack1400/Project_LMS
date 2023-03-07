@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/css/student_main.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
 <header>
-    <h1>Project LMS</h1>
+    <div class="header__topBar">
+        <a class="header__topBtn" href="index.html">로그아웃</a>
+        <a class="header__topBtn" href="student_mypage.html">마이페이지</a>
+    </div>
+    <div class="header__navBar">
+        <a class="header__logo" href="index.html">Project LMS</a>
+        <div class="header__nav">
+            <div class="header__btn" onclick="location.href='student_main.html'">강의목록</div>
+            <div class="header__btn" onclick="location.href='registerLecture.html'">수강신청</div>
+            <div class="header__btn" onclick="location.href='community.html'">커뮤니티</div>
+            <div class="header__btn" onclick="location.href='QnA.html'">고객센터</div>
+        </div>
+    </div>
 </header>
 
-<div id="mainDiv">
-    <div id="div1">
-        <h4>수강중인 강의 목록</h4>
-        <ul>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JAVASCRIPT</a></li>
-            <li><a href="#">C언어</a></li>
-        </ul>
+<main class="student-main">
+    <div class="student-main__lecture-list">
+        <h2>수강중인 강의 목록</h2>
+        <div class="student-main__lectureDiv">
+            <div>
+                <h3 class="student-main__title">자료구조</h3>
+                <span class="student-main__lectureCode">no.1601</span>
+            </div>
+            <span class="student-main__teacher">홍길동</span>
+        </div>
+        <div class="student-main__lectureDiv">
+            <div>
+                <h3 class="student-main__title">네트워크 보안과 블록체인</h3>
+                <span class="student-main__lectureCode">no.1602</span>
+            </div>
+            <span class="student-main__teacher">김영희</span>
+        </div>
+        <div class="student-main__lectureDiv">
+            <div>
+                <h3 class="student-main__title">데이터베이스</h3>
+                <span class="student-main__lectureCode">no.1603</span>
+            </div>
+            <span class="student-main__teacher">김민수</span>
+        </div>
+        <div class="student-main__lectureDiv">
+            <div>
+                <h3 class="student-main__title">마이크로프로세서 및 실험</h3>
+                <span class="student-main__lectureCode">no.1604</span>
+            </div>
+            <span class="student-main__teacher">홍길순</span>
+        </div>
     </div>
-    <div id="div2">
-        <button class="menuBtn" type="button" onclick="location.href='/registerlecture'">수강신청</button>
-    </div>
-    <div id="div3">
-        <button class="menuBtn" type="button">커뮤니티</button>
-    </div>
-    <div id="div4">
-        <button class="menuBtn" type="button">고객센터</button>
-    </div>
-</div>
+</main>
 
 <footer>
 

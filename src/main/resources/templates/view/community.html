@@ -3,67 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/css/community.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<header>
-    <h1>Project LMS</h1>
-</header>
-<div id="postList">
-    <h2>커뮤니티</h2>
-    <table>
-        <tr>
-            <th id="num">번호</th>
-            <th id="subject">제목</th>
-            <th id="id">아이디</th>
-            <th id="regdate">작성일</th>
-            <th id="count">조회</th>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><a href="#">질문있어요</a></td>
-            <td>hiehbb13</td>
-            <td>2021-12-28</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><a href="#">안녕하세요!</a></td>
-            <td>dfa22111</td>
-            <td>2021-12-28</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><a href="#">강의 후기!!!!!!!!!!!!</a></td>
-            <td>dsfddd333</td>
-            <td>2021-12-28</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><a href="#">질문!!!!!!!!!!</a></td>
-            <td>dfjejij11</td>
-            <td>2021-12-28</td>
-            <td>0</td>
-        </tr>
-    </table>
-</div>
-<nav id="pageNav">
-    <ul>
-        <li id="previousBtn"><a>Previous</a></li>
-        <li class="numBtn"><a>1</a></li>
-        <li class="numBtn"><a>2</a></li>
-        <li class="numBtn"><a>3</a></li>
-        <li class="numBtn"><a>4</a></li>
-        <li class="numBtn"><a>5</a></li>
-        <li class="numBtn"><a>6</a></li>
-        <li class="numBtn"><a>7</a></li>
-        <li class="numBtn"><a>8</a></li>
-        <li class="numBtn"><a>9</a></li>
-        <li id="nextBtn"><a>Next</a></li>
-    </ul>
-</nav>
+    <header>
+        <div class="header__topBar">
+            <a class="header__topBtn" href="index.html">로그아웃</a>
+            <a class="header__topBtn" href="student_mypage.html">마이페이지</a>
+        </div>
+        <div class="header__navBar">
+            <a class="header__logo" href="index.html">Project LMS</a>
+            <div class="header__nav">
+                <div class="header__btn" onclick="location.href='student_main.html'">강의목록</div>
+                <div class="header__btn" onclick="location.href='registerLecture.html'">수강신청</div>
+                <div class="header__btn" onclick="location.href='community.html'">커뮤니티</div>
+                <div class="header__btn" onclick="location.href='QnA.html'">고객센터</div>
+            </div>
+        </div>
+    </header>
+    <main class="community-main">
+        <h2>커뮤니티</h2>
+        <table>
+            <tr>
+                <th id="num">번호</th>
+                <th id="subject">제목</th>
+                <th id="id">아이디</th>
+                <th id="regdate">작성일</th>
+                <th id="count">조회</th>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">질문있어요</a></td>
+                <td>hiehbb13</td>
+                <td>2021-12-28</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">안녕하세요!</a></td>
+                <td>dfa22111</td>
+                <td>2021-12-28</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">강의 후기!!!!!!!!!!!!</a></td>
+                <td>dsfddd333</td>
+                <td>2021-12-28</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">질문!!!!!!!!!!</a></td>
+                <td>dfjejij11</td>
+                <td>2021-12-28</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <nav class="community-main__pageNav">
+            <ul>
+                <li id="previousBtn"><a>Previous</a></li>
+                <li class="numBtn"><a>1</a></li>
+                <li class="numBtn"><a>2</a></li>
+                <li class="numBtn"><a>3</a></li>
+                <li class="numBtn"><a>4</a></li>
+                <li class="numBtn"><a>5</a></li>
+                <li class="numBtn"><a>6</a></li>
+                <li class="numBtn"><a>7</a></li>
+                <li class="numBtn"><a>8</a></li>
+                <li class="numBtn"><a>9</a></li>
+                <li id="nextBtn"><a>Next</a></li>
+            </ul>
+        </nav>
+    </main>
+
 </body>
 </html>

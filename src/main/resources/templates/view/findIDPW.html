@@ -2,45 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/css/findIDPW.css">
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <title>Project LMS - 아이디/비밀번호 찾기</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<header>
+<header class="non-members-header">
     <h1>Project LMS</h1>
 </header>
-<div>
-    <h2>아이디 찾기</h2>
-    <form>
-        <table>
-            <tr>
-                <th>성명</th>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-                <th>이메일</th>
-                <td><input type="email" name="email"></td>
-            </tr>
-        </table>
-        <button type="submit">찾기</button>
-    </form>
-</div>
-<div>
-    <h2>비밀번호 찾기</h2>
-    <form>
-        <table>
-            <tr>
-                <th>아이디</th>
-                <td><input type="text" name="id"></td>
-            </tr>
-            <tr>
-                <th>이메일</th>
-                <td><input type="email" name="email"></td>
-            </tr>
-        </table>
-        <button type="submit">찾기</button>
-    </form>
-</div>
+<main class="findIDPW-main">
+    <div class="findIDPW-main__idDiv">
+        <h2>아이디 찾기</h2>
+        <form>
+            <div class="input-row">
+                <legend for="name">이름</legend>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input-row">
+                <legend for="email">이메일</legend>
+                <input type="email" name="email" id="email">
+            </div>
+            <button type="submit" class="mainBtn">찾기</button>
+        </form>
+    </div>
+    <div class="findIDPW-main__pwDiv">
+        <h2>비밀번호 찾기</h2>
+        <form>
+            <div class="input-row">
+                <legend for="id">아이디</legend>
+                <input type="text" name="id" id="id">
+            </div>
+            <div class="input-row">
+                <legend for="email">이메일</legend>
+                <input type="email" name="email" id="email">
+            </div>
+            <button type="submit" class="mainBtn">찾기</button>
+        </form>
+    </div>
+</main>
+
 </body>
 </html>

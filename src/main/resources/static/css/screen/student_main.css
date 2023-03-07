@@ -1,85 +1,45 @@
-body{
-    font-size:18px;
+.header__btn:nth-child(1) {
+    font-weight: 600;
+    color: var(--main-color);
 }
 
-#mainDiv{
-    width:660px;
-    height:660px;
-    margin:100px auto;
-    padding:5px;
-    position:relative;
+.student-main {
+    display: flex;
+    justify-content: center;
 }
 
-#mainDiv div{
-    border-top:4px solid rgb(6, 0, 88);
-    width:300px;
-    height:300px;
-    position:absolute;
+.student-main__lecture-list {
+    width: 65%;
 }
 
-#mainDiv #div1 h4{
-    display:block;
-    height:50px;
-    margin-top:0px;
-    line-height:50px;
-    background:#e6e6e6;
-    padding-left:10px;
+.student-main__lecture-list h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
 }
 
-#mainDiv #div1 ul li{
-    padding-left:0px;
+.student-main__lectureDiv {
+    background-color: var(--main-border);
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-#mainDiv #div1 ul li a{
-    text-decoration:none;
-    display:block;
-    width:100%;
-    color:black;
+.student-main__lectureDiv:hover {
+    box-shadow: 1.5px 1.5px 3px rgb(164, 164, 164);
+    border: 2px solid var(--main-color);
 }
 
-#mainDiv #div1 ul li a:hover{
-    background:#e6e6e6;
+.student-main__lectureDiv div {
+    display: flex;
+    justify-content: space-between;
 }
 
-#mainDiv #div1{
-    top:20px;
-    left:20px;
-}
-
-#mainDiv #div2{
-    top:20px;
-    left:340px;
-}
-#mainDiv #div3{
-    top:340px;
-    left:20px
-}
-#mainDiv #div4{
-    top:340px;
-    left:340px;
-}
-
-#mainDiv #div1 ul{
-    width:100%;
-    list-style:none;
-    padding:0px;
-}
-
-#mainDiv #div1 ul li{
-    border-bottom:1px solid black;
-    font-size:22px;
-    padding-left:5px;
-}
-
-#mainDiv .menuBtn{
-    width:100%;
-    height:100%;
-    border:none;
-    cursor:pointer;
-    font-size:24px;
-}
-
-#mainDiv .menuBtn:hover{
-    background:rgb(233, 233, 233);
+.student-main__title {
+    font-size: 27px;
+    font-weight: 500;
 }
 

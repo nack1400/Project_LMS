@@ -1,39 +1,66 @@
-body{
-    font-size:18px;
+.registerLecture-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#mainDiv{
-    width:700px;
-    margin:100px auto;
-    padding:10px;
+.registerLecture-main h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
 }
 
-#mainDiv h2{
-    padding:10px;
-    border-bottom:2px solid gray;
+.registerLecture-main form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#lectureList ul{
-    padding-left:0px;
-    list-style:none;
+.registerLecture-main ul {
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 190px;
+    padding-left: 10px;
+    box-shadow: inset 0px 0px 5px #666
 }
 
-#lectureList ul li{
-    margin-bottom:40px;
-    border-bottom:1px dotted gray;
+.registerLecture-main button {
+    width: 160px;
+    height: 50px;
+    margin-top: 50px;
 }
 
-#lectureList ul li table{
-    border:3px solid lightgray;
-    width:100%;
-    text-align:center;
-}
-#lectureList ul li table td{
-    border:1px solid lightgray;
+.registerLecture-main li {
+    background-color: var(--main-border);
+    width: 85%;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
 }
 
-#lectureList ul li button{
-    width:30%;
-    height:40px;
-    margin:10px 10px 10px 70%;
+.registerLecture-main .lectureInfo {
+    padding-top: 10px;
 }
+
+.lectureInfo h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.lectureInfo p {
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+

@@ -3,44 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" type="text/css" href="/css/registerLecture.css">
-  <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 </head>
 <body>
-<header>
-  <h1>Project LMS</h1>
-</header>
+    <header>
+        <div class="header__topBar">
+            <a class="header__topBtn" href="index.html">로그아웃</a>
+            <a class="header__topBtn" href="student_mypage.html">마이페이지</a>
+        </div>
+        <div class="header__navBar">
+            <a class="header__logo" href="index.html">Project LMS</a>
+            <div class="header__nav">
+                <div class="header__btn" onclick="location.href='student_main.html'">강의목록</div>
+                <div class="header__btn" onclick="location.href='registerLecture.html'">수강신청</div>
+                <div class="header__btn" onclick="location.href='community.html'">커뮤니티</div>
+                <div class="header__btn" onclick="location.href='QnA.html'">고객센터</div>
+            </div>
+        </div>
+    </header>
 
-<div id="mainDiv">
-    <h2>수강신청</h2>
-
-
-    <form action="/registerclass" method="post">
-        <div id="lectureList">
+    <main class="registerLecture-main">
+        <h2>수강신청</h2>
+        <form action="/registerclass" method="post">
             <ul>
                 <th:block>
                     <li th:each="dto:${lecture}">
-                        수강신청 체크 <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}"><br>
-                        <table>
-                            <tr>
-                                <td>강의명</td>
-                                <td th:text="${dto.lectureName}"></td>
-                            </tr>
-                            <tr>
-                                <td>강사</td>
-                                <td th:text="${dto.teacherId}"></td>
-                            </tr>
-                            <tr>
-                                <td>강의 내용</td>
-                                <td th:text="${dto.contents}"></td>
-                            </tr>
-                        </table>
+                        <div class="lectureInfo">
+                            <h3 th:text="${dto.lectureName}">자료구조</h3>
+                            <span th:text="${dto.teacherId}">홍길동</span>
+                            <p th:text="${dto.contents}">본 강의에서는 알고리즘을 표현하는 몇 가지 방법들을 소개하고, 주어진 알고리즘의 복잡성을 공간 복잡성 및 시간 복잡성의 관점에서 분석할 수 있는 방법을 설명한다.</p>  
+                        </div>
+                        <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}">
+                    </li>
+                </th:block>
+                <th:block>
+                    <li th:each="dto:${lecture}">
+                        <div class="lectureInfo">
+                            <h3 th:text="${dto.lectureName}">네트워크 보안과 블록체인</h3>
+                            <span th:text="${dto.teacherId}">김영희</span>
+                            <p th:text="${dto.contents}">본 강의에서는 알고리즘을 표현하는 몇 가지 방법들을 소개하고, 주어진 알고리즘의 복잡성을 공간 복잡성 및 시간 복잡성의 관점에서 분석할 수 있는 방법을 설명한다.</p>  
+                        </div>
+                        <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}">
+                    </li>
+                </th:block>
+                <th:block>
+                    <li th:each="dto:${lecture}">
+                        <div class="lectureInfo">
+                            <h3 th:text="${dto.lectureName}">데이터베이스</h3>
+                            <span th:text="${dto.teacherId}">김민수</span>
+                            <p th:text="${dto.contents}">본 강의에서는 알고리즘을 표현하는 몇 가지 방법들을 소개하고, 주어진 알고리즘의 복잡성을 공간 복잡성 및 시간 복잡성의 관점에서 분석할 수 있는 방법을 설명한다.</p>  
+                        </div>
+                        <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}">
+                    </li>
+                </th:block>
+                <th:block>
+                    <li th:each="dto:${lecture}">
+                        <div class="lectureInfo">
+                            <h3 th:text="${dto.lectureName}">마이크로프로세서 및 실험</h3>
+                            <span th:text="${dto.teacherId}">홍길순</span>
+                            <p th:text="${dto.contents}">본 강의에서는 알고리즘을 표현하는 몇 가지 방법들을 소개하고, 주어진 알고리즘의 복잡성을 공간 복잡성 및 시간 복잡성의 관점에서 분석할 수 있는 방법을 설명한다.</p>  
+                        </div>
+                        <input type="radio" name="code" th:value="${dto.lectureCode}" th:text="${dto.lectureCode}">
                     </li>
                 </th:block>
             </ul>
-        </div>
-        <button type="submit">신청하기</button>
-    </form>
-</div>
+            <button class="registerBtn mainBtn" type="submit">신청하기</button>
+        </form>
+    </main>
 </body>
 </html>

@@ -2,10 +2,12 @@ button {
     font-size: 20px;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 1.5px 1.5px 3px rgb(164, 164, 164);
 }
 
 .mainBtn {
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     color: white;
 }
 

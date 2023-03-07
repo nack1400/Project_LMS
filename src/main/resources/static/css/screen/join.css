@@ -30,12 +30,6 @@
 .join-main__input-row .joinInput {
     height: 30px;
     width: 300px;
-    border: 2px solid var(--main-border);
-    padding-left: 10px;
-}
-
-.join-main__input-row .joinInput:focus {
-    border-color: var(--main-color);
 }
 
 .join-main__user-select input {
